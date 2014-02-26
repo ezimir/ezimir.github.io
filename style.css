@@ -9,9 +9,9 @@ body {
 
 #profile, #links {
     background: rgba(255, 255, 255, .7);
-    padding: 3em 5em;
+    padding: 2em 3em;
     margin: 0 auto 2em;
-    width: 15em;
+    width: 17em;
 }
 
 #profile {
@@ -31,4 +31,76 @@ hr {
     margin: 2em 1em;
     width 100%;
 }
+
+
+#links li {
+    margin-bottom: 1.5em;
+}
+
+#links a {
+    color: #666;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    overflow: hidden;
+    text-align: left;
+    text-decoration: none;
+    -webkit-transition: color .6s, line-height .6s;
+}
+    #links .icon {
+        background: rgba(255, 255, 255, .7) url("icons-sprite.png") no-repeat 0 50px;
+        border: 3px solid #eee;
+        border-radius: 28px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        height: 50px;
+        width: 50px;
+        -webkit-transition: background-color .6s;
+    }
+    #links .network {
+        width: 100%;
+    }
+
+    #links .link {
+        font-size: .8em;
+        opacity: 0;
+        position: relative;
+        -webkit-transition: opacity .6s, top .6s;
+        top: 0;
+    }
+
+#links a:hover {
+    color: #000;
+    line-height: 35px;
+}
+    #links a:hover .link {
+        opacity: 1;
+        top: -17px;
+    }
+
+#links a:hover,
+#links a:hover .icon,
+#links a:hover .link {
+    -webkit-transition-duration: .3s;
+}
+
+
+#links .facebook .icon { background-position: -750px 0; }
+#links .twitter .icon { background-position: -50px 0; }
+
+    #links .facebook:hover .icon {
+        background-color: #3b5998;
+        background-position: -750px -50px;
+    }
+    #links .twitter:hover .icon {
+        background-color: #00a0d1;
+        background-position: -50px -50px;
+    }
+    #links .instagram:hover .icon {
+        background-color: #457399;
+    }
+
 
