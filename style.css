@@ -58,7 +58,7 @@ hr {
         margin-right: 10px;
         height: 50px;
         width: 50px;
-        -webkit-transition: background-color .6s;
+        -webkit-transition: background .6s;
     }
     #links .network {
         width: 100%;
