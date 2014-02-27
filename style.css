@@ -97,4 +97,15 @@ hr {
 #links a:hover .icon-facebook { background-color: #3b5998; }
 #links a:hover .icon-twitter { background-color: #00a0d1; }
 #links a:hover .icon-instagram { background-color: #457399; }
+#links a:hover .icon-skype { background-color: #00aff0; }
+#links a:hover .icon-linkedin { background-color: #0e76a8; }
+#links a:hover .icon-email { background-color: #2d2d2d; }
+#links a:hover .icon-github { background-color: #4183c4; }
+#links a:hover .icon-stackexchange { background-color: #00a0d1; }
+#links a:hover .icon-forrst { background-color: #5b9a68; }
+#links a:hover .icon-dribbble { background-color: #ea4c89; }
+#links a:hover .icon-deviantart { background-color: #4e6252; }
+#links a:hover .icon-lastfm { background-color: #c3000d; }
+#links a:hover .icon-youtube { background-color: #c4302b; }
+#links a:hover .icon-reddit { background-color: #ff2700; }
 
