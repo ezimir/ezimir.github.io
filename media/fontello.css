@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'fontello';
     font-style: normal;
@@ -25,11 +26,9 @@
     line-height: 1em;
 
     /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
     margin-left: .2em;
 
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, .3);
 }
 
 .icon-instagram:before { content: '\e800'; } /* '' */
