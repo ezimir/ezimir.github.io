@@ -3,17 +3,18 @@
     font-family: 'fontello';
     font-style: normal;
     font-weight: normal;
-    src: url('fontello.ttf') format('truetype');
+    src: url('fontello.ttf');
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before {
     font-family: "fontello";
     font-style: normal;
     font-weight: normal;
     speak: none;
 
     display: inline-block;
-    margin-right: .2em;
+    line-height: 1em;
+    margin: 0 .2em;
     text-align: center;
     text-decoration: inherit;
     width: 1em;
@@ -21,12 +22,6 @@
     /* For safety - reset parent styles, that can break glyph codes*/
     font-variant: normal;
     text-transform: none;
-
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
-
-    /* Animation center compensation - margins should be symmetric */
-    margin-left: .2em;
 
     text-shadow: 1px 1px 1px rgba(127, 127, 127, .3);
 }
