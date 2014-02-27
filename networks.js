@@ -18,7 +18,7 @@ var network_template = '\
         <li><a href="%(url)s" target="_blank">\
             <span class="icon-%(icon)s"></span>\
             <div class="network"> %(name)s </div>\
-            <span class="link"> %(nice_url)s </span>\
+            <span class="link"> %(preview)s </span>\
         </a></li>\
     ',
     target = document.getElementById('links');
@@ -33,7 +33,10 @@ for (var i = 0; network = networks[i]; i++) {
 
 function prepareData(network) {
     network.icon = network.name.toLowerCase();
-    network.nice_url = network.url.replace(/^https?:\/\//, '');
+
+    if (typeof network.preview === 'undefined') {
+        network.preview = network.url.replace(/^https?:\/\/(www\.)?/, '');
+    }
 
     return network;
 }
