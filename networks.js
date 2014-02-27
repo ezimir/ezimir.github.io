@@ -11,8 +11,56 @@ var networks = [
         {
             name: 'Instagram',
             url: 'http://instagram.com/martinblogads'
-        }
+        },
+        {
+            name: 'Skype',
+            url: 'skype:ezimir?userinfo',
+            preview: 'skype:ezimir'
+        },
+        {
+            name: 'LinkedIn',
+            url: 'http://www.linkedin.com/in/ezimir'
+        },
+        {
+            name: 'Email',
+            url: 'mailto:ezimir@gmail.com',
+            preview: 'ezimir@gmail.com'
+        },
+        {
+            name: 'Github',
+            url: 'https://github.com/ezimir'
+        },
+        {
+            name: 'StackExchange',
+            url: 'http://stackexchange.com/users/24432/martin-toth?tab=accounts',
+            preview: 'SE/users/24432/martin-toth'
+        },
+        {
+            name: 'Forrst',
+            url: 'https://forrst.com/people/ezimir'
+        },
+        {
+            name: 'Dribbble',
+            url: 'http://dribbble.com/ezimir'
+        },
+        {
+            name: 'DeviantArt',
+            url: 'http://ezimir.deviantart.com'
+        },
+        {
+            name: 'LastFM',
+            url: 'http://last.fm/user/ezimir'
+        },
+        {
+            name: 'YouTube',
+            url: 'http://www.youtube.com/user/ezimir'
+        },
+        {
+            name: 'Reddit',
+            url: 'http://www.reddit.com/user/piatok'
+        },
     ];
+
 
 var network_template = '\
         <li><a href="%(url)s" target="_blank">\
