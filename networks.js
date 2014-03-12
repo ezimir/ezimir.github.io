@@ -63,11 +63,11 @@ var networks = [
 
 
 var network_template = '\
-        <li><a href="%(url)s" target="_blank">\
+        <a href="%(url)s" target="_blank">\
             <span class="icon-%(icon)s"></span>\
             <div class="network"> %(name)s </div>\
             <span class="link"> %(preview)s </span>\
-        </a></li>\
+        </a>\
     ',
     target = document.getElementById('links');
 
