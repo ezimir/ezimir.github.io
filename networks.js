@@ -76,6 +76,12 @@ for (var i = 0; network = networks[i]; i++) {
 
     var item = document.createElement('li');
     item.innerHTML = sprintf(network_template, network);
+    item.dataset.name = network.name;
+
+    addEvent(item, 'click', function () {
+        ga('send', 'event', 'link', 'click', this.dataset.name);
+    });
+
     target.appendChild(item);
 }
 
@@ -87,5 +93,13 @@ function prepareData(network) {
     }
 
     return network;
+}
+
+function addEvent(element, event_name, callback){
+    if (element.attachEvent) {
+        return element.attachEvent('on' + event_name, callback);
+    } else {
+        return element.addEventListener(event_name, callback, false);
+    }
 }
 
