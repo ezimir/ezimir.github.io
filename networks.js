@@ -10,12 +10,12 @@ var networks = [
         },
         {
             name: 'Instagram',
-            url: 'http://instagram.com/martinblogads'
+            url: 'http://instagram.com/kosicanmartin'
         },
         {
             name: 'Skype',
-            url: 'skype:ezimir?userinfo',
-            preview: 'skype:ezimir'
+            url: 'skype:martinblogads?userinfo',
+            preview: 'skype:martinblogads'
         },
         {
             name: 'LinkedIn',
