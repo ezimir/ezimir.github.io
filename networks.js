@@ -13,11 +13,6 @@ var networks = [
             url: 'http://instagram.com/kosicanmartin'
         },
         {
-            name: 'Skype',
-            url: 'skype:martinblogads?userinfo',
-            preview: 'skype:martinblogads'
-        },
-        {
             name: 'LinkedIn',
             url: 'http://www.linkedin.com/in/ezimir'
         },
@@ -34,10 +29,6 @@ var networks = [
             name: 'StackExchange',
             url: 'http://stackexchange.com/users/24432/martin-toth?tab=accounts',
             preview: 'SE/users/24432/martin-toth'
-        },
-        {
-            name: 'Forrst',
-            url: 'https://forrst.com/people/ezimir'
         },
         {
             name: 'Dribbble',
