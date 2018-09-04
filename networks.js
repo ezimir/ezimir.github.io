@@ -70,7 +70,11 @@ for (var i = 0; network = networks[i]; i++) {
     item.dataset.name = network.name;
 
     addEvent(item, 'click', function () {
-        ga('send', 'event', 'link', 'click', this.dataset.name);
+        gtag('event', 'click', {
+            'event_category' : 'link',
+            'event_label': this.dataset.name,
+            'non_interaction': true,
+        });
     });
 
     target.appendChild(item);
@@ -86,7 +90,7 @@ function prepareData(network) {
     return network;
 }
 
-function addEvent(element, event_name, callback){
+function addEvent(element, event_name, callback) {
     if (element.attachEvent) {
         return element.attachEvent('on' + event_name, callback);
     } else {
