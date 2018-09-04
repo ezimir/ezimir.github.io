@@ -33,6 +33,10 @@ hr {
 }
 
 
+#links {
+    list-style: none
+}
+
 #links li {
     margin-bottom: 1.5em;
 }
