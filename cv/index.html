@@ -9,17 +9,136 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="vue-app">
         <div class="row">
             <div class="column column-25 is-left-panel">
+
+                <h1> Martin Tóth </h1>
+                <h4> web developer </h4>
+
+
+                <h3> Personal </h3>
+
+                <dl>
+                    <dt>Email</dt>
+                    <dd>ezimir@gmail.com</dd>
+
+                    <dt>Phone</dt>
+                    <dd>+36-30-719-9317</dd>
+
+                    <dt>Address</dt>
+                    <dd>
+                        Haller utca 16-18<br>
+                        1096 Budapest, Hungary
+                    </dd>
+
+                    <dt>Born</dt>
+                    <dd>
+                        1984-04-16<br>
+                        Košice, Slovakia
+                    </dd>
+
+                    <dt>Languages</dt>
+                    <dd>
+                        Slovak (native)<br>
+                        English (ILR4+)<br>
+                        Hungarian (ILR4+)<br>
+                        Czech (ILR3)<br>
+                        German (ILR1)<br>
+                    </dd>
+                </dl>
+
+                <h3> Education </h3>
+
+                <div>
+                    <strong> 2002 – 2008 </strong>
+                    <p>
+                        Technical University in Košice, Slovakia<br>
+                        Faculty of Electrical Engineering and Informatics<br>
+                        Software Engineering
+                    </p>
+                </div>
+
+                <div>
+                    <strong> 1998 – 2002 </strong>
+                    <p>
+                        High School Šrobárova 1, Košice, Slovakia<br>
+                        mathematics-physics-informatics
+                    </p>
+                </div>
+
+                <h4> Additional </h4>
+
+                <div>
+                    <strong> 2012 </strong>
+                    <p>
+                        Advanced MySQL Course<br>
+                        by Ruander (HU)
+                    </p>
+                </div>
+
+                <div>
+                    <strong> 2001 – 2002 </strong>
+                    <p>
+                        Facilitation of the personal development through continuing
+                        education course in the process of lifelong learning.
+                        FACE project of Leonardo da Vinci program.
+                    </p>
+                </div>
             </div>
 
             <div class="column is-right-panel">
+                <h2> Work Experience </h2>
+
+                <employment v-for="obj, i in employments"
+                    :o="obj"
+                    :key="i"
+                ></employment>
             </div>
         </div>
     </div>
 
+    <script type="text/x-template" id="vue-employment">
+        <div>
+            <h3> {{ o.employer }} </h3>
+            <strong> {{ o.position }} </strong>
+
+            <project v-for="obj, i in o.projects"
+                :o="obj"
+                :key="i"
+            ></project>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="vue-project">
+        <div>
+            <h4> {{ o.title }} ({{ o.duration }}) </h4>
+            <p> {{ o.description }} </p>
+
+            <div class="row">
+                <div class="column">
+                    <h5> Tasks </h5>
+                    <ul>
+                        <li v-for="task in o.tasks"> {{ task }} </li>
+                    </ul>
+                </div>
+
+                <div class="column column-33">
+                    <h5> Tech </h5>
+
+                    <p>
+                        <template v-for="tech in o.tech">
+                            {{ tech }}<br>
+                        </template>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js"></script>
+    <script src="life-data.js"></script>
+    <script src="page.js"></script>
 </body>
 </html>
