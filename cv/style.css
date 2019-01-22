@@ -50,3 +50,21 @@ dt::after {
     display: inline;
 }
 
+h1 + h4,
+h3 + .position {
+    margin-top: -2rem;
+}
+
+.project > .title {
+    margin: 1rem 0 0;
+}
+.project > .description {
+    margin-bottom: .5rem;
+}
+
+.project ul {
+    margin-left: 2.5rem;
+    list-style: disc;
+}
+
+

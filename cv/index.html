@@ -144,7 +144,7 @@
 
     <script type="text/x-template" id="vue-employment">
         <div class="employment">
-            <h3> {{ o.employer }} </h3>
+            <h3 class="title"> {{ o.employer }} </h3>
 
             <position v-for="obj, i in o.positions"
                 :o="obj"
@@ -155,7 +155,7 @@
 
     <script type="text/x-template" id="vue-position">
         <div class="position">
-            <strong> {{ o.title }} </strong>
+            <strong class="title"> {{ o.title }} </strong>
 
             <project v-for="obj, i in o.projects"
                 :o="obj"
@@ -166,8 +166,8 @@
 
     <script type="text/x-template" id="vue-project">
         <div class="project">
-            <h4> {{ o.title }} ({{ o.duration }}) </h4>
-            <p v-if="o.description">
+            <h4 class="title"> {{ o.title }} ({{ o.duration }}) </h4>
+            <p v-if="o.description" class="description">
                 <template v-if="Array.isArray(o.description)">
                     <template v-for="row in o.description">
                         {{ row }}<br>
@@ -181,14 +181,14 @@
 
             <div v-if="o.tasks || o.tech" class="row">
                 <div class="column">
-                    <h5> Tasks </h5>
+                    <h5 class="title"> Tasks </h5>
                     <ul v-if="o.tasks">
                         <li v-for="task in o.tasks"> {{ task }} </li>
                     </ul>
                 </div>
 
                 <div class="column column-33">
-                    <h5> Tech </h5>
+                    <h5 class="title"> Tech </h5>
 
                     <p v-if="o.tech">
                         <template v-for="tech in o.tech">
