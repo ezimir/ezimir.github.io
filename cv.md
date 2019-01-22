@@ -249,7 +249,7 @@ Copeland Henry
     CEO
     henry@blogads.net
 
-Śokič Bruno
+Šokić Bruno
     Product Manager
     brunosokic@gmail.com
 
