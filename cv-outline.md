@@ -58,13 +58,6 @@ Education
     by Ruander (HU)
 
 
-2001 – 2002
-
-    Facilitation of the personal development through continuing
-    education course in the process of lifelong learning.
-    FACE project of Leonardo da Vinci program.
-
-
 ----
 
 Work Experience
