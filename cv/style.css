@@ -1,8 +1,8 @@
 
-
 body {
     font-family: "Oxygen", sans-serif;
     font-weight: 300;
+    font-size: 1.35rem
 }
 
 @media (min-width: 40.0rem) {
@@ -16,8 +16,18 @@ body {
     background: #fff;
 }
 
-strong, b, dt {
-    font-weight: 400
+strong, b, dt,
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1 { font-size: 3.3rem }
+h2 { font-size: 2.8rem }
+h3 { font-size: 2.2rem }
+h4 { font-size: 1.8rem }
+h5 { font-size: 1.6rem }
+h6 { font-size: 1.35rem }
+
 
 .image {
     margin: 7rem auto;
