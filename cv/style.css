@@ -84,6 +84,9 @@ dd + dt {
 .employment + .employment {
     margin-top: 3.5rem;
 }
+.project + .project {
+    margin-top: 1rem;
+}
 
 .content .employer,
 .content .project-name {
@@ -133,7 +136,7 @@ dd + dt {
 
     /* print to full page hack */
     .column.experience {
-        padding-bottom: 9rem;
+        padding-bottom: 6rem;
     }
 }
 
