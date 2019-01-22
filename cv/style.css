@@ -2,7 +2,8 @@
 body {
     font-family: "Oxygen", sans-serif;
     font-weight: 300;
-    font-size: 1.35rem
+    font-size: 1.35rem;
+    color: #555;
 }
 
 @media (min-width: 40.0rem) {
@@ -12,8 +13,9 @@ body {
     }
 }
 
-.column.is-right-panel {
+.column.experience {
     background: #fff;
+    padding: 2rem 4rem;
 }
 
 strong, b, dt,
@@ -27,6 +29,17 @@ h3 { font-size: 2.2rem }
 h4 { font-size: 1.8rem }
 h5 { font-size: 1.6rem }
 h6 { font-size: 1.35rem }
+
+.person h3,
+.experience h2 {
+    border-bottom: 2px solid rgba(126, 164, 220, .5);
+    margin-top: 2em;
+}
+
+.person .position,
+.position > .title {
+    color: #888;
+}
 
 
 .image {
@@ -45,6 +58,9 @@ h6 { font-size: 1.35rem }
         margin-top: -.75rem;
     }
 
+dt {
+    margin-bottom: 0;
+}
 dt::after {
     content: ":";
     display: inline;
@@ -53,6 +69,10 @@ dt::after {
 h1 + h4,
 h3 + .position {
     margin-top: -2rem;
+}
+
+.project {
+    margin-bottom: 3rem;
 }
 
 .project > .title {
@@ -67,4 +87,8 @@ h3 + .position {
     list-style: disc;
 }
 
+.tasks .title,
+.tech .title {
+    margin-bottom: 0;
+}
 

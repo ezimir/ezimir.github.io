@@ -11,14 +11,14 @@
 <body>
     <div class="container" id="vue-app">
         <div class="row">
-            <div class="column column-25 is-left-panel">
+            <div class="column column-25 person">
 
                 <figure class="image">
                     <img src="martin.jpg">
                 </figure>
 
-                <h1> Martin Tóth </h1>
-                <h4> web developer </h4>
+                <h1 class="name"> Martin Tóth </h1>
+                <h4 class="position"> web developer </h4>
 
 
                 <h3> Personal </h3>
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="column is-right-panel">
+            <div class="column experience">
                 <h2> Work Experience </h2>
 
                 <employment v-for="obj, i in employments"
@@ -180,14 +180,14 @@
             <p v-if="o.note">({{ o.note }})</p>
 
             <div v-if="o.tasks || o.tech" class="row">
-                <div class="column">
+                <div class="column tasks">
                     <h5 class="title"> Tasks </h5>
                     <ul v-if="o.tasks">
                         <li v-for="task in o.tasks"> {{ task }} </li>
                     </ul>
                 </div>
 
-                <div class="column column-33">
+                <div class="column column-33 tech">
                     <h5 class="title"> Tech </h5>
 
                     <p v-if="o.tech">
