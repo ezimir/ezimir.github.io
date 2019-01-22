@@ -18,6 +18,7 @@ body {
     padding: 2rem 4rem;
 }
 
+
 strong, b, dt,
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
@@ -37,7 +38,7 @@ h6 { font-size: 1.35rem }
 }
 
 .person .position,
-.position > .title {
+.position > .column > .title {
     color: #888;
 }
 
@@ -76,19 +77,31 @@ h3 + .position {
 }
 
 .project > .title {
-    margin: 1rem 0 0;
+    margin: 0;
 }
 .project > .description {
     margin-bottom: .5rem;
 }
 
 .project ul {
-    margin-left: 2.5rem;
-    list-style: disc;
+    margin-left: 2rem;
+    list-style: none;
 }
+    .project li {
+        margin-bottom: .3rem;
+        position: relative;
+    }
+        .project li:before {
+            content: "·";
+            display: inline;
+
+            position: absolute;
+            left: -1rem;
+        }
 
 .tasks .title,
 .tech .title {
     margin-bottom: 0;
+    font-size: 1.35rem;
 }
 

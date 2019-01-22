@@ -154,13 +154,17 @@
     </script>
 
     <script type="text/x-template" id="vue-position">
-        <div class="position">
-            <strong class="title"> {{ o.title }} </strong>
+        <div class="row position">
+            <div class="column column-20">
+                <strong class="title"> {{ o.title }} </strong>
+            </div>
 
-            <project v-for="obj, i in o.projects"
-                :o="obj"
-                :key="i"
-            ></project>
+            <div class="column">
+                <project v-for="obj, i in o.projects"
+                    :o="obj"
+                    :key="i"
+                ></project>
+            </div>
         </div>
     </script>
 
@@ -188,12 +192,10 @@
                 </div>
 
                 <div class="column column-33 tech">
-                    <h5 class="title"> Tech </h5>
+                    <h5 class="title"> Technologies used </h5>
 
                     <p v-if="o.tech">
-                        <template v-for="tech in o.tech">
-                            {{ tech }}<br>
-                        </template>
+                        <template v-for="tech, i in o.tech"><template v-if="i > 0">, </template>{{ tech }}</template>
                     </p>
                 </div>
             </div>
