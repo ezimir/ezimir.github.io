@@ -4,3 +4,12 @@ body {
     font-weight: 300;
 }
 
+.container {
+    background: #f2f2f2;
+    max-width: none;
+}
+
+.column.is-right-panel {
+    background: #fff;
+}
+
