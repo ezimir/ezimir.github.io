@@ -2,51 +2,41 @@
 body {
     font-family: "Oxygen", sans-serif;
     font-weight: 300;
-    font-size: 1.35rem;
-    color: #555;
+    font-size: .875rem;
 }
 
-@media (min-width: 40.0rem) {
-    .container {
-        background: #f2f2f2;
-        max-width: none;
+.container {
+    background: #f2f2f2;
+    width: auto;
+    max-width: none;
+}
+    .container.content {
+        margin-bottom: 0;
     }
-}
 
-.column.experience {
-    background: #fff;
-    padding: 2rem 4rem;
-}
+    .column.person {
+        padding: 7rem 2rem 2rem;
+    }
+    .column.experience {
+        background: #fff;
+        padding: 4rem 2rem 2rem;
+    }
+
+
 
 
 strong, b, dt,
-h1, h2, h3, h4, h5, h6 {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
     font-weight: 400;
 }
 
-h1 { font-size: 3.3rem }
-h2 { font-size: 2.8rem }
-h3 { font-size: 2.2rem }
-h4 { font-size: 1.8rem }
-h5 { font-size: 1.6rem }
-h6 { font-size: 1.35rem }
-
-.person h3,
-.experience h2 {
-    border-bottom: 2px solid rgba(126, 164, 220, .5);
-    margin-top: 2em;
-}
-
-.person .position,
-.position > .column > .title {
-    color: #888;
-}
-
-
-.image {
-    margin: 7rem auto;
-    width: 15rem;
-    height: 15rem;
+.content .image {
+    margin: 0 auto;
 
     border: 5px solid #fff;
     border-radius: 15rem;
@@ -55,53 +45,95 @@ h6 { font-size: 1.35rem }
     overflow: hidden;
 }
     .image img {
-        width: 100%;
         margin-top: -.75rem;
     }
 
-dt {
-    margin-bottom: 0;
+.person h1.name {
+    margin: 5rem 0 0;
 }
+.person .position,
+.position-name {
+    margin-top: 0;
+    color: #888;
+}
+
+.person h3,
+.experience h2 {
+    border-bottom: 2px solid rgba(126, 164, 220, .5);
+}
+
+.person h3,
+.person h4 {
+    margin-top: 2em;
+}
+
+.person p {
+    margin-bottom: 1rem;
+}
+
+
 dt::after {
     content: ":";
     display: inline;
 }
 
-h1 + h4,
-h3 + .position {
-    margin-top: -2rem;
+dd + dt {
+    margin-top: 1rem;
 }
 
-.project {
-    margin-bottom: 3rem;
+.employment + .employment {
+    margin-top: 3.5rem;
 }
 
-.project > .title {
-    margin: 0;
-}
-.project > .description {
-    margin-bottom: .5rem;
+.content .employer,
+.content .project-name {
+    margin-bottom: 0;
 }
 
 .project ul {
-    margin-left: 2rem;
+    margin: 0 0 0 1.7rem;
     list-style: none;
 }
     .project li {
-        margin-bottom: .3rem;
         position: relative;
     }
         .project li:before {
             content: "·";
             display: inline;
+            font-size: 1.5rem;
+            line-height: 1.3rem;
 
             position: absolute;
-            left: -1rem;
+            left: -.95rem;
+            top: 0;
         }
 
-.tasks .title,
-.tech .title {
-    margin-bottom: 0;
-    font-size: 1.35rem;
+
+.tech p {
+    font-size: .95em;
+}
+
+.content .employment + h2 {
+    margin-top: 3rem;
+}
+
+
+@media print {
+    abbr {
+        text-decoration: none;
+    }
+    .column.person {
+        width: 25%;
+    }
+
+    /* print margin hack */
+    .employment:nth-child(5) {
+        padding-top: 3rem;
+    }
+
+    /* print to full page hack */
+    .column.experience {
+        padding-bottom: 9rem;
+    }
 }
 

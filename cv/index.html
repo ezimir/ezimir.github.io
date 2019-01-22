@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title> Martin Tóth </title>
-    <link href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css" rel="stylesheet">
-    <link href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400&amp;subset=latin-ext" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400&amp;subset=latin-ext" rel="stylesheet" media="all">
+    <link href="style.css" rel="stylesheet" media="all">
 </head>
 <body>
-    <div class="container" id="vue-app">
-        <div class="row">
-            <div class="column column-25 person">
-
-                <figure class="image">
+    <div id="vue-app" class="container content">
+        <div class="columns">
+            <div class="column is-narrow person">
+                <figure class="image is-128x128">
                     <img src="martin.jpg">
                 </figure>
 
@@ -45,10 +45,10 @@
                     <dt>Languages</dt>
                     <dd>
                         Slovak (native)<br>
-                        English (ILR4+)<br>
-                        Hungarian (ILR4+)<br>
-                        Czech (ILR3)<br>
-                        German (ILR1)<br>
+                        English (<abbr title="Interagency Language Roundtable scale">ILR</abbr>4+)<br>
+                        Hungarian (<abbr title="Interagency Language Roundtable scale">ILR</abbr>4+)<br>
+                        Czech (<abbr title="Interagency Language Roundtable scale">ILR</abbr>3)<br>
+                        German (<abbr title="Interagency Language Roundtable scale">ILR</abbr>1)<br>
                     </dd>
                 </dl>
 
@@ -80,15 +80,6 @@
                         by Ruander (HU)
                     </p>
                 </div>
-
-                <div>
-                    <strong> 2001 – 2002 </strong>
-                    <p>
-                        Facilitation of the personal development through continuing
-                        education course in the process of lifelong learning.
-                        FACE project of Leonardo da Vinci program.
-                    </p>
-                </div>
             </div>
 
             <div class="column experience">
@@ -101,7 +92,7 @@
 
                 <h2> References </h2>
 
-                <div class="row">
+                <div class="columns">
                     <div class="column">
                         <h4> NetSuccess, s. r. o. </h4>
 
@@ -144,7 +135,7 @@
 
     <script type="text/x-template" id="vue-employment">
         <div class="employment">
-            <h3 class="title"> {{ o.employer }} </h3>
+            <h3 class="employer"> {{ o.employer }} </h3>
 
             <position v-for="obj, i in o.positions"
                 :o="obj"
@@ -154,9 +145,9 @@
     </script>
 
     <script type="text/x-template" id="vue-position">
-        <div class="row position">
-            <div class="column column-20">
-                <strong class="title"> {{ o.title }} </strong>
+        <div class="columns position">
+            <div class="column is-one-quarter">
+                <strong class="position-name"> {{ o.title }} </strong>
             </div>
 
             <div class="column">
@@ -170,7 +161,7 @@
 
     <script type="text/x-template" id="vue-project">
         <div class="project">
-            <h4 class="title"> {{ o.title }} ({{ o.duration }}) </h4>
+            <h4 class="project-name"> {{ o.title }} ({{ o.duration }}) </h4>
             <p v-if="o.description" class="description">
                 <template v-if="Array.isArray(o.description)">
                     <template v-for="row in o.description">
@@ -183,16 +174,16 @@
             </p>
             <p v-if="o.note">({{ o.note }})</p>
 
-            <div v-if="o.tasks || o.tech" class="row">
+            <div v-if="o.tasks || o.tech" class="columns">
                 <div class="column tasks">
-                    <h5 class="title"> Tasks </h5>
+                    <strong> Tasks </strong>
                     <ul v-if="o.tasks">
                         <li v-for="task in o.tasks"> {{ task }} </li>
                     </ul>
                 </div>
 
-                <div class="column column-33 tech">
-                    <h5 class="title"> Technologies used </h5>
+                <div class="column is-one-third tech">
+                    <strong> Technologies used </strong>
 
                     <p v-if="o.tech">
                         <template v-for="tech, i in o.tech"><template v-if="i > 0">, </template>{{ tech }}</template>
