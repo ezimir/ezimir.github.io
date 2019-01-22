@@ -18,7 +18,22 @@ body {
 
 strong, b, dt {
     font-weight: 400
+
+.image {
+    margin: 7rem auto;
+    width: 15rem;
+    height: 15rem;
+
+    border: 5px solid #fff;
+    border-radius: 15rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+    overflow: hidden;
 }
+    .image img {
+        width: 100%;
+        margin-top: -.75rem;
+    }
 
 dt::after {
     content: ":";
