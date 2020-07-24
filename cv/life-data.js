@@ -8,7 +8,41 @@ let WORK = [
                 projects: [
                     {
                         title: 'Baumit Kalkulátor',
-                        duration: '2017 - now',
+                        duration: '2019 - now',
+                        description: [
+                            'upgrades and application support for web service developed in previous years',
+                            'deploy application to new country (CZ)',
+                        ],
+                        tasks: [
+                            'application support and continuous development of new features',
+                            'integrate calculator app with 3rd party data stores (product data and prices)',
+                            'integrate offer creation workflow with Jira (client\'s choice)',
+                            'upgrade project to python3, later Django 3',
+                            'migrate to PostreSQL',
+                            'authenticate users via ActiveDirectory',
+                            'computational improvements (new product calculations, new outputs)',
+                            'prepare translation and configuration frameworks to support deployment in multiple countries',
+                            'deploy new application instance for Czechia',
+                        ],
+                        tech: [
+                            'python3 (Django 3), DRF',
+                            'PostreSQL',
+                            'Jira API, ActiveDirectory',
+                            'incl. all previous (below)',
+                        ],
+                    },
+                ],
+            },
+        ],
+    }, {
+        employer: 'NetSuccess, s. r. o.',
+        positions: [
+            {
+                title: 'full stack developer',
+                projects: [
+                    {
+                        title: 'Baumit Kalkulátor',
+                        duration: '2017 - 2019',
                         description: 'construction material calculator and offer manager with component wizard/assembly-tool for end-customers',
                         tasks: [
                             'spec and create tool for employees and customers of building-material manufacturing company',

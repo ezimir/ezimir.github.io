@@ -66,7 +66,29 @@ Work Experience
 # NetSuccess, s. r. o.
 **full stack developer**
 
-## Baumit Kalkulátor (2017 - now)
+## Baumit Kalkulátor (2019 - now)
+upgrades and application support for web service developed in previous years
+deploy application to new country (CZ)
+
+tasks:
+
+    application support and continuous development of new features
+    integrate calculator app with 3rd party data stores (product data and prices)
+    integrate offer creation workflow with Jira (client's chosen tool)
+    upgrade project to python3, later Django 3
+    migrate to PostreSQL
+    authenticate users via ActiveDirectory
+    computational improvements (new product calculations, new outputs)
+
+tech:
+
+    python3 (Django 3), DRF
+    PostreSQL
+    Jira API, ActiveDirectory
+    incl. all previous (below)
+
+
+## Baumit Kalkulátor (2017 - 2019)
 construction material calculator and offer manager with component wizard/assembly-tool for end-customers
 
 tasks:
