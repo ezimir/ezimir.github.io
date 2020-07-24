@@ -33,10 +33,6 @@ let WORK = [
                     },
                 ],
             },
-        ],
-    }, {
-        employer: 'NetSuccess, s. r. o.',
-        positions: [
             {
                 title: 'full stack developer',
                 projects: [
